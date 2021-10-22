@@ -48,3 +48,14 @@ const quotes = [
       "Do not go where the path may lead, go instead where there is no path and leave a trail. ",
   },
 ];
+
+const qouteBtn = document.querySelector("#quoteBtn");
+const allQuotes = document.querySelector("#quotes");
+const author = document.querySelector("#author");
+
+qouteBtn.addEventListener("click", displayQuote);
+function displayQuote() {
+  let numerOfQuotes = Math.floor(Math.random() * quotes.length);
+  allQuotes.innerHTML = quotes[numerOfQuotes].quote;
+  author.innerHTML = quotes[numerOfQuotes].name;
+}
